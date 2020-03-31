@@ -15,8 +15,11 @@ const gulp = require("gulp"),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify-es').default,
   babel = require("gulp-babel"),
-  normalize = require('node-normalize-scss')
-
+  normalize = require('node-normalize-scss'),
+  file = require('gulp-file')
+let config = {
+  cname: 'undertale.manuelosorio.me'
+}
 let paths= {
   styles: {
     src: "src/assets/css/**/*.{sass,scss}",
@@ -176,7 +179,9 @@ gulp.task('default', buildWatch)
 gulp.task('static', build)
 gulp.task('deploy', function () {
   return gulp.src("./_dist/**/*")
+    .pipe(file('CNAME', config.cname))
     .pipe(deploy({
+
       remoteUrl: "https://github.com/manuelosorio/undertale-interactive-map.git",
       branch: "gh-pages"
     }))
