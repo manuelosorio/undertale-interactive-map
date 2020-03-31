@@ -129,30 +129,30 @@ function vendor() {
     .src(paths.vendor.src)
     .pipe(gulp.dest(paths.vendor.dest))
 }
-// function watch() {
-//   browserSync.init({
-//     server: {
-//       baseDir: "./_dist",
-//       open: false,
-//     },
-//     callbacks: {
-//       ready: function(err, bs) {
-//         bs.addMiddleware("*", function (req, res) {
-//           res.writeHead(302, {
-//             location: "/404.html"
-//           })
-    
-//           res.end()
-//         })
-//       }
-//     }
-//   });
-  function watch() {
+function watch() {
   browserSync.init({
     server: {
-      baseDir: "./_dist"
+      baseDir: "./_dist",
+      open: false,
+    },
+    callbacks: {
+      ready: function(err, bs) {
+        bs.addMiddleware("*", function (req, res) {
+          res.writeHead(302, {
+            location: "/#!/404"
+          })
+    
+          res.end()
+        })
+      }
     }
   });
+  // function watch() {
+  // browserSync.init({
+  //   server: {
+  //     baseDir: "./_dist"
+  //   }
+  // });
   gulp.watch(paths.styles.src, style).on('change', browserSync.reload);
   gulp.watch(paths.images.src, images).on('change', browserSync.reload);
   gulp.watch(paths.scripts.src, scripts).on('change', browserSync.reload);
