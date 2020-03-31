@@ -34,8 +34,9 @@ $(document).keydown(function(e){
 })
 
 
-function setPosition(x, y) {
+function setPosition(target, x, y) {
   let $this = $(this)
+  $this.target = target
   $this.posX = x
   $this.posY = y
 
@@ -49,14 +50,14 @@ function setPosition(x, y) {
   } else {
     console.warn("There is actually a null X or Y... Hopefully its intentional...")
     if ($this.posX != null) {
-      $player.css({
+      target.css({
         'left': $this.posX + 'px'
       })
     }else {
       console.warn("X is returning null")
     }
     if ($this.posY != null) {
-      $player.css({
+     target.css({
         'top': $this.posY + 'px'
       })
     }else {

@@ -9,7 +9,7 @@ function routes() {
     console.info('The Underground')
     locationsLoad('the-underground')
     newSound('start')
-    setPosition(62, 311)
+    setPosition($player, 62, 311)
     
   })
   
@@ -21,7 +21,7 @@ function routes() {
     deleteNav()
     $(document).keydown(function (e) {
       if (window.location.href.indexOf("404") > -1) {
-        setPosition(62, 311)
+        setPosition($player, 62, 311)
         router.navigate("/")
         
       }
@@ -39,8 +39,13 @@ function routes() {
       },
       'snowdin': function () {
         console.info('Snowdin Forest')
-        locationsLoad('snowdin-forest')
+        locationsLoad('snowdin')
         newSound('snowdin')
+      },
+      'waterfall': function () {
+        console.info('Hotland')
+        locationsLoad('waterfall')
+        newSound('waterfall')
       },
       'hotland': function () {
         console.info('Hotland')
