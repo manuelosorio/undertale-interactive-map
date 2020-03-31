@@ -10,7 +10,6 @@ function locationsLoad(name) {
       $routerContainer.stop().animate({opacity: '1'}, 800, 'swing')
       $player.stop().delay(800).css({opacity: '1'})
     })
-    console.log('Not 404 bitch')
   } else {
     $.ajaxSetup({
       cache: false
