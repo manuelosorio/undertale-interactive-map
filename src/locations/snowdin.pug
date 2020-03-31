@@ -1,2 +1,20 @@
+nav.nav
+  .nav--menu.icon#navMenu
+    include ../includes/hamburger.html
+    p menu
+  .nav--container
+    ul.prev-nex
+      li.prev
+        a(href="/#!/ruins") &lt; Ruins
+      li.next
+        a(href="/#!/waterfall") Waterfall &gt;
+    h2.current Snowdin
+    ul.links#links
+      li
+        a(href="/#!/snowdin/snowman") Snowman
+      li
+        a(href="/#!/snowdin/grillbys") Grillby's
+      li
+        a(href="/#!/snowdin/papyrus-sans-house") Papyrus/Sans' House
 .map.map--snowdin
-    img(src="images/maps/snowdin.png", alt="Map of Snowdin")
+  img(src="images/maps/snowdin.png" alt="Map of Snowdin")
