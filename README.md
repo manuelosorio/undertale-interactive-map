@@ -1,14 +1,14 @@
-# Manuel Osorio Start Kit
-Starter Kit used for my future projects
-## TODO
-* Add processing for:
-    - [x] ~~Images~~
-    - [x] ~~JavaScript~~
-    - [x] ~~Pug~~
-    - [x] ~~Sass~~
-    - [x] ~~GH-Pages Deployment~~
-* Make a SCSS Version
-* Make a Version that doesn't use Pug
-* Make simple one page site
-* Add boilerplate code
-* Create an simple CMD tool to make new project using this repository
+# Undertale Interactive Map
+
+## Requirements: 
+
+- [x] Minimum of 1 custom font viewable incurrent browsers 
+- [x] Very large interactive map image in the background.
+- [ ]  Minimum of 10 sites on the map with additional detail on each one.
+- [ ]  Map key that allows the user to navigate to sites without moving the map.
+
+## Features
+
+* Router that loads new content via ajax
+* Different songs play based on the route
+* Game like controls to move "Player"
