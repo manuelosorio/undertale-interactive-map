@@ -1,8 +1,8 @@
 const $audio = $('#audio'),
-      $muteButton = $('.icon'),
       $volumeIcon = $('#volumeIcon'),
       $player = $('.player'),
-      $routerContainer = $('.router--container')
+      $routerContainer = $('.router--container'),
+      $menu = $('.nav--menu')
   let $map = undefined
 $(document).ready(function () {
   routes()
@@ -46,7 +46,7 @@ $(document).ready(function () {
   })
 
 
-  $muteButton.click(function () {
+  $volumeIcon.click(function () {
     if (localStorage['soundAllowed'] === 'true') {
       localStorage['soundAllowed'] = 'false'
       $volumeIcon.attr('src', './images/mute.svg')
@@ -69,7 +69,5 @@ $(document).ready(function () {
   $('.player').draggable({
     addClasses: false
   })
-
-
 
 })

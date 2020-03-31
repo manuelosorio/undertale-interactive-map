@@ -33,38 +33,17 @@ html(lang="en")
     link(rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css")
     link(rel="stylesheet" href="css/style.css")
   body
-    img(src="" data-muted="images/mute.svg" data-sound="images/sound.svg" class="icon icon--mute" id="volumeIcon")
-
-    nav.nav
-      .nav--menu.icon
-        include includes/hamburger.html
-        p menu
-      .nav--container
-        h2.current The Underground
-        ul.links#links
-          li
-            a(href="/#!/ruins") Ruins
-          li
-            a(href="/#!/snowdin") Snowdin
-          li
-            a(href="/#!/waterfall") Waterfall
-          li
-            a(href="/#!/hotland") Hotland
-          li
-            a(href="/#!/the-core") The Core
-          li
-            a(href="/#!/new-home") New Home
-    img(src="./images/frisk.svg").player
+    img(src="" data-muted="images/mute.svg" data-sound="images/sound.svg" class="icon icon--mute" id="volumeIcon" alt="Volume Icon")
+    img(src="./images/frisk.svg" alt="Red Heart Icon").player
     .router--container
     .alert.dialogue
       p Requesting to play audio on this site. You can enable or disable sound at any point.
       button#allow Allow
       button#decline decline
     audio(id="audio" loop src="./audio/music/start.mp3")
-
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
     script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
     script(src="https://cdn.jsdelivr.net/npm/jqueryrouter@2.2.6/dist/js/jquery.router.min.js")
     script(src="https://unpkg.com/navigo@6")
-    script(src="./vendor/touch.js")
+    //script(src="./vendor/touch.js")
     script(src="scripts/script.js")

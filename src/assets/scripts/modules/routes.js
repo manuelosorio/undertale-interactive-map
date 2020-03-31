@@ -10,7 +10,6 @@ function routes() {
     locationsLoad('the-underground')
     newSound('start')
     setPosition($player, 62, 311)
-    
   })
   
   router.notFound(function (query) {

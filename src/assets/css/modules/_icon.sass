@@ -10,21 +10,6 @@
     overflow: visible
     &:hover
       fill: lighten($red, 5%)
-    &.active
-      .hamburger
-        border: $red solid 1px
-        transform: rotate(90deg)
-        transform-origin: center
-        transition: 200ms
-        *
-          transform-origin: center
-          &:first-child
-            transform: translate(-3px, 3px) rotate(45deg)
-          &:nth-child(2)
-            transform: translate(10px, 0)
-            opacity: 0
-          &:last-child
-            transform: translate(-3px, -3px) rotate(-45deg)
   &--mute
     right: 1rem
     top: 1rem

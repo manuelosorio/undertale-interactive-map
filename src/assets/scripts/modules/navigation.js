@@ -8,3 +8,5 @@ $links.click(function () {
 function deleteNav() {
   // $links.empty()
 }
+
+
