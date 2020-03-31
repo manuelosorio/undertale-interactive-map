@@ -177,7 +177,7 @@ gulp.task('static', build)
 gulp.task('deploy', function () {
   return gulp.src("./_dist/**/*")
     .pipe(deploy({
-      remoteUrl: "https://github.com/manuelosorio/starter-kit.git",
+      remoteUrl: "https://github.com/manuelosorio/undertale-interactive-map.git",
       branch: "gh-pages"
     }))
 })
