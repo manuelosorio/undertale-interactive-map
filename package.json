@@ -1,0 +1,60 @@
+{
+  "name": "starter-kit",
+  "version": "1.0.5",
+  "description": "Starter Kit for my future projects",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelosorio/starter-kit.git"
+  },
+  "keywords": [
+    "Manuel",
+    "Osorio",
+    "Gulp",
+    "Sass",
+    "Pug",
+    "Starter",
+    "Kit"
+  ],
+  "author": "Manuel Osorio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manuelosorio/starter-kit/issues"
+  },
+  "homepage": "https://github.com/manuelosorio/starter-kit#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "autoprefixer": "^9.7.1",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-audiosprite": "^1.1.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^0.9.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "node-bourbon": "^4.2.8",
+    "node-normalize-scss": "^8.0.1"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.4.0",
+    "gulp-file": "^0.4.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "jquery": "^3.4.1",
+    "jqueryrouter": "^2.2.8"
+  }
+}
