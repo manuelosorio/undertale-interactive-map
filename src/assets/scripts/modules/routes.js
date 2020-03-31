@@ -36,6 +36,7 @@ function routes() {
         console.info('Ruins')
         locationsLoad('ruins')
         newSound('ruins')
+        setPosition($player, 680, 377)
       },
       'snowdin': function () {
         console.info('Snowdin Forest')
