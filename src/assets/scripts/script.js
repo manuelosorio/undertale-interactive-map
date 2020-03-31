@@ -1,7 +1,8 @@
 const $audio = $('#audio'),
       $muteButton = $('.muteButton'),
       $volumeIcon = $('#volumeIcon'),
-      $player = $('.player')
+      $player = $('.player'),
+      $routerContainer = $('.router--container')
   let $map = undefined
 $(document).ready(function () {
   routes()
@@ -72,12 +73,3 @@ $(document).ready(function () {
 
 
 })
-
-
-
-function locationsLoad(name) {
-    $.ajaxSetup({
-      cache: true
-    })
-    $('.router--container').load('./locations/' + name + '.html')
-}
