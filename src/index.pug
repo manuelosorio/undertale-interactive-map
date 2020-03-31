@@ -5,7 +5,7 @@ html(lang="en")
     meta(charset="utf-8")
     meta(name="Author" content="Manuel Osorio")
     meta(name="description" content="Interactive Map for Undertale")
-    
+
     // Open Graph - Facebook, Google, LinkedIn
     meta(property="og:type" content="Article")
     meta(property="og:description" content="Interactive Map for Undertale")
@@ -33,22 +33,31 @@ html(lang="en")
     link(rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css")
     link(rel="stylesheet" href="css/style.css")
   body
+    img(src="" data-muted="images/mute.svg" data-sound="images/sound.svg" class="icon icon--mute" id="volumeIcon")
 
-    img(src="" data-muted="images/mute.svg" data-sound="images/sound.svg").muteButton#volumeIcon
-    nav.nav--container
-      Strong.current Hello
-      ul.links#links
-        li Hi
-        li Hello
-        li Hey
-
-
+    nav.nav
+      .nav--menu.icon
+        include includes/hamburger.html
+        p menu
+      .nav--container
+        Strong.current The Underground
+        ul.links#links
+          li
+            a(href="/#!/") Ruins
+          li
+            a(href="/#!/") Snowdin
+          li
+            a(href="/#!/") Waterfall
+          li
+            a(href="/#!/") Hotland
+          li
+            a(href="/#!/") The Core
+          li
+            a(href="/#!/") New Home
     img(src="./images/frisk.svg").player
     .router--container
-    
-
     .alert.dialogue
-      p Requesting to play audio on this site. You can enable or disable sound at any point. 
+      p Requesting to play audio on this site. You can enable or disable sound at any point.
       button#allow Allow
       button#decline decline
     audio(id="audio" loop src="./audio/music/start.mp3")

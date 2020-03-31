@@ -6,5 +6,5 @@ $links.click(function () {
   deleteNav()
 })
 function deleteNav() {
-  $links.empty()
+  // $links.empty()
 }

@@ -1,5 +1,5 @@
 const $audio = $('#audio'),
-      $muteButton = $('.muteButton'),
+      $muteButton = $('.icon'),
       $volumeIcon = $('#volumeIcon'),
       $player = $('.player'),
       $routerContainer = $('.router--container')
@@ -7,7 +7,7 @@ const $audio = $('#audio'),
 $(document).ready(function () {
   routes()
   const $audio = $('#audio'),
-        $muteButton = $('.muteButton'),
+        $muteButton = $('.icon'),
         $volumeIcon = $('#volumeIcon')
 
   //alert variables
