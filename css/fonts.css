@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Determination Mono";
+  src: url("../fonts/DeterminationMonoWeb.woff") format("woff"), url("../fonts/DTM-Mono.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Determination Sans";
+  src: url("../fonts/DeterminationSansWeb.woff") format("woff"), url("../fonts/DTM-Sans.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'determination_monoregular';
+  src: url("../fonts/dtm-mono-webfont.woff2") format("woff2"), url("../fonts/dtm-mono-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'determination_sansregular';
+  src: url("../fonts/dtm-sans-webfont.woff2") format("woff2"), url("../fonts/dtm-sans-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=_dist/css/fonts.css.map */

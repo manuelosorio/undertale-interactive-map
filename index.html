@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Undertale Interactive Map</title>
+    <meta charset="utf-8">
+    <meta name="Author" content="Manuel Osorio">
+    <meta name="description" content="Interactive Map for Undertale">
+    <!-- Open Graph - Facebook, Google, LinkedIn-->
+    <meta property="og:type" content="Article">
+    <meta property="og:description" content="Interactive Map for Undertale">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="#">
+    <meta property="og:site_name" content="Undertale Interactive Map">
+    <!--end Open Graph-->
+    <!--Twitter Meta Content-->
+    <meta name="twitter:title" content="Undertale Interactive Map">
+    <meta name="twitter:description" content="Interactive Map for Undertale">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:site" content="@MKDesignzManuel">
+    <meta name="twitter:creator" content="@MKDesignzManuel">
+    <!--End Twitter Meta Content-->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body><img class="icon icon--mute" src="" data-muted="images/mute.svg" data-sound="images/sound.svg" id="volumeIcon" alt="Volume Icon"><img class="player" src="./images/frisk.svg" alt="Red Heart Icon">
+    <div class="router--container"></div>
+    <div class="alert dialogue">
+      <p>Requesting to play audio on this site. You can enable or disable sound at any point.</p>
+      <button id="allow">Allow</button>
+      <button id="decline">decline</button>
+    </div>
+    <audio id="audio" loop src="./audio/music/start.mp3"></audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jqueryrouter@2.2.6/dist/js/jquery.router.min.js"></script>
+    <script src="https://unpkg.com/navigo@6"></script>
+    <!--script(src="./vendor/touch.js")-->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
