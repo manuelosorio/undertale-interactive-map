@@ -31,7 +31,8 @@ let paths= {
   },
   html: {
     src: "src/**/**/*.pug",
-    exclude: "src/includes/*.pug",
+    exclude: '!src/**/_*/',
+    excludeSub: '!src/**/_*/**/*',
     dest: "_dist/"
   },
   images: {
@@ -52,7 +53,7 @@ let paths= {
   },
   vendor: {
     src: "src/assets/vendor/**",
-    dest: "_dist/vendor"
+    dest: "_dist/scripts/vendor"
   }
 }
 function style() {
@@ -73,7 +74,8 @@ function html() {
   return gulp
     .src([
       paths.html.src,
-      paths.html.exclude
+      paths.html.exclude,
+      paths.html.excludeSub
     ])
     .pipe(pug({
       pretty: true
