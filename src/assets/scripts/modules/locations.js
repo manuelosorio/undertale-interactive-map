@@ -13,6 +13,13 @@ function locationsLoad(name) {
         let $this = $(this)
         $this.toggleClass('active')
       })
+      $('.map').draggable({
+        addClasses: false
+      })
+      $('.interest-point').draggable({
+        addClasses: false
+      })
+
     })
   } else {
     $.ajaxSetup({

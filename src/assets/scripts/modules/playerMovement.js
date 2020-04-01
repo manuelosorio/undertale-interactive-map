@@ -43,21 +43,21 @@ function setPosition(target, x, y) {
   if ($this.posX != null && $this.posY != null) {
     console.log("Position X", $this.posX)
     console.log("Position Y", $this.posY)
-    $player.css({
+    $this.target.css({
       'left': $this.posX + 'px',
       'top': $this.posY + 'px'
     })
   } else {
     console.warn("There is actually a null X or Y... Hopefully its intentional...")
     if ($this.posX != null) {
-      target.css({
+      $this.$this.target.css({
         'left': $this.posX + 'px'
       })
     }else {
       console.warn("X is returning null")
     }
     if ($this.posY != null) {
-     target.css({
+      $this.target.css({
         'top': $this.posY + 'px'
       })
     }else {
@@ -78,16 +78,21 @@ function updatePosition(x, y, dt, easing) {
   if ($this.moveX != null) {
     if ($this.moveX < 0) {
       $this.moveX *= -1
-      $player.stop().animate({
-        left: '-=' + $this.moveX + 'px'
-      }, dt, easing)
+      if ($player.position().left > 1) {
+        $player.stop().animate({
+          left: '-=' + $this.moveX + 'px'
+        }, dt, easing)
+      }
+
       $map.stop().animate({
         left: '+=' + ($this.moveX - $this.offsetX) + 'px'
       }, dt, easing)      
     } else {
-      $player.stop().animate({
-        left: '+=' + $this.moveX + 'px'
-      }, dt, easing)
+      if ($player.position().left < (window.innerWidth/2)) {
+        $player.stop().animate({
+          left: '+=' + $this.moveX + 'px'
+        }, dt, easing)
+      }
       $map.stop().animate({
         left: '-=' + ($this.moveX - $this.offsetX) + 'px'
       }, dt, easing)
@@ -95,22 +100,25 @@ function updatePosition(x, y, dt, easing) {
   }
   // Y Movement
   if ($this.moveY != null) {
+
     if ($this.moveY < 0) {
       $this.moveY *= -1
-      $player.stop().animate({
-        top: '-=' + $this.moveY + 'px'
-      }, dt, easing)
+      if ($player.position().top > 1) {
+        $player.stop().animate({
+          top: '-=' + $this.moveY + 'px'
+        }, dt, easing)
+      }
 
       $map.stop().animate({
         top: '+=' + ($this.moveY - $this.offsetY) + 'px'
       }, dt, easing)
 
     } else {
-
-      $player.stop().animate({
-        top: '+=' + $this.moveY + 'px'
-      }, dt, easing)
-
+      if ($player.position().top < (window.innerHeight/2)) {
+        $player.stop().animate({
+          top: '+=' + $this.moveY + 'px'
+        }, dt, easing)
+      }
       $map.stop().animate({
         top: '-=' + ($this.moveY - $this.offsetY) + 'px'
       }, dt, easing)

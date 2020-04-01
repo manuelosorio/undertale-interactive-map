@@ -65,7 +65,7 @@ function style() {
     }))
     .on("error", sass.logError)
     .pipe(postcss([autoprefixer()]))
-    .pipe(sourcemaps.write(paths.styles.dest))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
