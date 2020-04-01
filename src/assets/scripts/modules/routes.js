@@ -57,15 +57,30 @@ function routes() {
       },
 
       'waterfall': function () {
-        console.info('Hotland')
+        console.info('Waterfall')
         locationsLoad('waterfall')
+        setPosition($player, 475, 365)
         newSound('waterfall')
       },
+      'waterfall/temmie': function () {
+        console.info('Temmie')
+        setPosition($('.map'), -14596, -5488)
+        setPosition($player, 753, 375)
+        newSound('temmie')
+      },
+
       'hotland': function () {
         console.info('Hotland')
         locationsLoad('hotland')
+        setPosition($player, 258, 432)
         newSound('hotland')
       },
+      'hotland/alphy': function () {
+        setPosition($player, 768, 369.246)
+        setPosition($('.map'), -4758.97, -6658.56)
+        newSound('alphys')
+      },
+
       'the-core': function () {
         console.info('The Core')
         locationsLoad('the-core')
