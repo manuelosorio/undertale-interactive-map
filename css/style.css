@@ -506,14 +506,24 @@ li a:hover {
   width: 65%;
   left: 1rem;
   bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .dialogue#npc img {
-  width: 40%;
+  width: 20%;
 }
 
 .dialogue#npc p {
-  width: 60%;
+  width: 78%;
+  margin-left: 2%;
 }
 
 .map {
