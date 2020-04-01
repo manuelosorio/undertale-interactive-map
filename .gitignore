@@ -62,4 +62,4 @@ package-lock.json
 /_dist/
 
 .idea/
-/.publish/
+.publish/
