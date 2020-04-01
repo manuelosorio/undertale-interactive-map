@@ -51,11 +51,13 @@ function routes() {
         newSound('snowdin')
         setPosition($player, 264, 468)
         dialogue('Sans', '* Hey Bud, ya busy looking looking at a map of the Game Undertale? [new]' +
-          '[spoiler]* Not that I care, but check out the ame by Toby Fox[/spoiler]')
+          '* Not that I care, but check out the ame by Toby Fox')
       },
       'snowdin/snowman': function () {
         setPosition($('.map'), -5634, -794)
         setPosition($player, 764, 300)
+        dialogue('Snowman', '* I want to see the world, but can not move [new]' +
+          '[spoiler]Lets you take a piece to take faraway from there[/spoiler]')
       },
       'snowdin/grillbys': function () {
         setPosition($('.map'), -21909, -2870)

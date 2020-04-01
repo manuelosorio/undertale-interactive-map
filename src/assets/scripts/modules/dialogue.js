@@ -7,7 +7,8 @@ function dialogue(name, message) {
   $this.name = name
   let src = "images/" + $this.name.toLowerCase() + '.png'
   let alt = "Image of " + $this.name
-  $chat.text($this.message).html($chat.html().replace('[new]', '<br />')
+  $chat.text($this.message)
+  $chat.html($chat.html().replace('[new]', '<br /><br />')
     .replace('[spoiler]', '<span class="spoiler">')
     .replace('[/spoiler]', '</span>'))
   $avatar.attr('src', src)
