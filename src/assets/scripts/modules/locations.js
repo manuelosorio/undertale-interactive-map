@@ -9,10 +9,7 @@ function locationsLoad(name) {
     $routerContainer.load('./locations/' + name + '.html', function () {
       $routerContainer.stop().animate({opacity: '1'}, 800, 'swing')
       $player.stop().delay(800).css({opacity: '1'})
-      $('#navMenu').on('click', function () {
-        let $this = $(this)
-        $this.toggleClass('active')
-      })
+      navEvents()
       $('.map').draggable({
         addClasses: false
       })

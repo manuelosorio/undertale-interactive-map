@@ -5,14 +5,22 @@ function dialogue(name, message) {
   let $this = $(this)
   $this.message = message
   $this.name = name
-  let src = "images/" + $this.name.toLowerCase() + '.png'
-  let alt = "Image of " + $this.name
+  if (($this.name === null)) {
+    $avatar.attr('src', '')
+    $avatar.attr('alt', '')
+  } else {
+
+    let src = "images/" + $this.name.toLowerCase() + '.png'
+    let alt = "Image of " + $this.name
+    $avatar.attr('src', src)
+    $avatar.attr('alt', alt)
+  }
+
   $chat.text($this.message)
   $chat.html($chat.html().replace('[new]', '<br /><br />')
     .replace('[spoiler]', '<span class="spoiler">')
     .replace('[/spoiler]', '</span>'))
-  $avatar.attr('src', src)
-  $avatar.attr('alt', alt)
+
   dialogueShow()
   $('.spoiler').click(function () {
     $('.spoiler').toggleClass('spoiler')
@@ -28,3 +36,6 @@ function dialogueHide() {
   $avatar.attr('alt', null)
   $dialogue.hide()
 }
+$('#closeBox').click(function () {
+  dialogueHide()
+})

@@ -4,6 +4,7 @@
   background: black
   position: absolute
   bottom: 0
+  z-index: 10
   &#npc
     width: 65%
     left: 1rem
@@ -29,5 +30,10 @@
     color: $white
     position: absolute
     top: 0
-    left: 1rem
-
+    left: 50%
+    transform: translateX(-50%)
+#closeBox
+  position: absolute
+  top: 1rem
+  left: 1rem
+  cursor: pointer

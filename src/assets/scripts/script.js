@@ -70,10 +70,4 @@ $(document).ready(function () {
 
     console.log('Is sound allowed: ', localStorage['soundAllowed'])
 
-
-
-  $('.player').draggable({
-    addClasses: false
-  })
-
 })
