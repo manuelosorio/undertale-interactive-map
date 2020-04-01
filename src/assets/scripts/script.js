@@ -30,7 +30,11 @@ $(document).ready(function () {
       $volumeIcon.attr('src', './images/mute.svg')
     }
   } else {
-    console.log()
+    // $alert.remove()
+    // $audio.trigger('pause')
+    // $audio.prop('volume', 0)
+    // $audio.prop('currentTime', '0')
+    // $volumeIcon.attr('src', './images/mute.svg')
   }
 
   $allow.click(function() {
@@ -38,10 +42,12 @@ $(document).ready(function () {
     $alert.remove()
     $audio.trigger('play')
     $audio.prop('volume', 0.25)
+    $volumeIcon.attr('src', './images/sound.svg')
   })
 
   $decline.click(function() {
     localStorage.setItem('soundAllowed', 'false')
+    $volumeIcon.attr('src', './images/mute.svg')
     $alert.remove()
   })
 
