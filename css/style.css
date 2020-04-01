@@ -506,6 +506,10 @@ li a:hover {
   left: 0;
 }
 
+.map img {
+  height: 100%;
+}
+
 .map--underground {
   top: -10rem;
 }
@@ -513,6 +517,46 @@ li a:hover {
 .map--ruins {
   top: -3523px;
   left: -89px;
+}
+
+.map--snowdin {
+  left: -164px;
+  top: -976px;
+  height: 7000px;
+}
+
+.map--waterfall {
+  left: -3156px;
+  top: -4151px;
+  height: 8000px;
+}
+
+.map--hotland {
+  height: 8000px;
+  left: 160px;
+  top: -6580.99px;
+}
+
+.interest-point {
+  position: absolute;
+  background: #ff0000;
+  height: 1rem;
+  width: 1rem;
+}
+
+#snowman {
+  top: 868px;
+  left: 6416px;
+}
+
+#Grillbys {
+  top: 3204px;
+  left: 22694px;
+}
+
+#papyrusSansHouse {
+  top: 3244px;
+  left: 24694px;
 }
 
 .icon {
@@ -714,4 +758,4 @@ li a:hover {
 
 /*----------------------  End States  ---------------------- */
 
-/*# sourceMappingURL=_dist/css/style.css.map */
+/*# sourceMappingURL=style.css.map */
