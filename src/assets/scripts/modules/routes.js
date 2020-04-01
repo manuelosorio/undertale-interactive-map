@@ -9,6 +9,7 @@ function routes() {
     locationsLoad('the-underground')
     newSound('start')
     setPosition($player, 62, 311)
+    dialogueHide()
   })
   
   router.notFound(function (query) {
@@ -39,6 +40,7 @@ function routes() {
       'ruins/spider-bake-sale': function () {
         newSound('spiderdance')
         setPosition($player, 680, 377)
+        dialogue('Sans', '* The Spider Bake Sale is a small vendor and fundraising event found in the Ruins and Hotland.')
       },
       'snowdin': function () {
         console.info('Snowdin Forest')
