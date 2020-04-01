@@ -31,10 +31,10 @@ $(document).ready(function () {
     }
   } else {
     // $alert.remove()
-    // $audio.trigger('pause')
-    // $audio.prop('volume', 0)
-    // $audio.prop('currentTime', '0')
-    // $volumeIcon.attr('src', './images/mute.svg')
+    $audio.trigger('pause')
+    $audio.prop('volume', 0)
+    $audio.prop('currentTime', '0')
+    $volumeIcon.attr('src', '')
   }
 
   $allow.click(function() {
