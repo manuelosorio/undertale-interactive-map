@@ -375,7 +375,7 @@ body {
 
 .player {
   position: absolute;
-  z-index: 15;
+  z-index: 1;
   display: block;
   height: 50px;
   width: 50px;
@@ -500,6 +500,7 @@ li a:hover {
   background: black;
   position: absolute;
   bottom: 0;
+  z-index: 10;
 }
 
 .dialogue#npc {
@@ -524,6 +525,41 @@ li a:hover {
 .dialogue#npc p {
   width: 78%;
   margin-left: 2%;
+}
+
+.spoiler {
+  background: #404040;
+  color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.spoiler::-moz-selection {
+  color: transparent;
+  background: transparent;
+}
+
+.spoiler::selection {
+  color: transparent;
+  background: transparent;
+}
+
+.spoiler:before {
+  content: 'SPOILER';
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#closeBox {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
 }
 
 .map {
@@ -552,8 +588,8 @@ li a:hover {
 }
 
 .map--waterfall {
-  left: -3156px;
-  top: -4151px;
+  left: -544.199px;
+  top: -6743px;
   height: 8000px;
 }
 
@@ -564,6 +600,7 @@ li a:hover {
 }
 
 .interest-point {
+  display: block;
   position: absolute;
   background: #ff0000;
   height: 1rem;
@@ -576,8 +613,8 @@ li a:hover {
 }
 
 #Grillbys {
-  top: 3204px;
-  left: 22694px;
+  top: 3229px;
+  left: 22769px;
 }
 
 #papyrusSansHouse {
