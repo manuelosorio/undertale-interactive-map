@@ -36,6 +36,10 @@ function routes() {
         newSound('ruins')
         setPosition($player, 680, 377)
       },
+      'ruins/spider-bake-sale': function () {
+        newSound('spiderdance')
+        setPosition($player, 680, 377)
+      },
       'snowdin': function () {
         console.info('Snowdin Forest')
         locationsLoad('snowdin')
@@ -80,7 +84,6 @@ function routes() {
         setPosition($('.map'), -4758.97, -6658.56)
         newSound('alphys')
       },
-
       'the-core': function () {
         console.info('The Core')
         locationsLoad('the-core')
@@ -89,7 +92,7 @@ function routes() {
       'new-home': function () {
         console.info('New Home')
         locationsLoad('new-home')
-        newSound('')
+        newSound('his-theme')
       }
     }).resolve()
   
