@@ -7,12 +7,10 @@ function dialogue(name, message) {
   $this.name = name
   let src = "images/" + $this.name.toLowerCase() +'.png'
   let alt = "Image of " + $this.name
-  $chat.text($this.message)
+  $chat.text($this.message).html($chat.html().replace('[new]', '<br />'))
   $avatar.attr('src', src)
   $avatar.attr('alt', alt)
-
   dialogueShow()
-
 }
 function dialogueShow() {
   $dialogue.show()

@@ -36,11 +36,14 @@ function routes() {
         locationsLoad('ruins')
         newSound('ruins')
         setPosition($player, 680, 377)
+        dialogue('Toriel', '* I am Toriel, caretaker of the Ruins...[new]' +
+          '* I pass through this place every day to see if anyone has fallen down')
       },
       'ruins/spider-bake-sale': function () {
         newSound('spiderdance')
         setPosition($player, 680, 377)
-        dialogue('Sans', '* The Spider Bake Sale is a small vendor and fundraising event found in the Ruins and Hotland.')
+        dialogue('Muffet', '* The Spider Bake Sale is a small vendor and fundraising' +
+          ' event found in the Ruins and Hotland.')
       },
       'snowdin': function () {
         console.info('Snowdin Forest')
