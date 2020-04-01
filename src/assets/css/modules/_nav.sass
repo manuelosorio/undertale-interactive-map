@@ -14,16 +14,18 @@
     p
       margin-left: 1rem
   &--container
+    display: none
     opacity: 0
     transition: 200ms
     position: relative
     border: 10px $white solid
     background: $black
     padding: 0rem  1rem 1rem
-    display: flex
     justify-content: center
     flex-direction: column
     align-items: center
+    transform: scale(0)
+    z-index: -5
     .current
       line-height: 0.5
       color: $red
