@@ -16,3 +16,18 @@
     p
       width: 78%
       margin-left: 2%
+.spoiler
+  background: lighten($black, 25%)
+  color: transparent
+  position: relative
+  cursor: pointer
+  &::selection
+    color: transparent
+    background: transparent
+  &:before
+    content: 'SPOILER'
+    color: $white
+    position: absolute
+    top: 0
+    left: 1rem
+

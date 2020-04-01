@@ -50,6 +50,8 @@ function routes() {
         locationsLoad('snowdin')
         newSound('snowdin')
         setPosition($player, 264, 468)
+        dialogue('Sans', '* Hey Bud, ya busy looking looking at a map of the Game Undertale? [new]' +
+          '[spoiler]* Not that I care, but check out the ame by Toby Fox[/spoiler]')
       },
       'snowdin/snowman': function () {
         setPosition($('.map'), -5634, -794)
