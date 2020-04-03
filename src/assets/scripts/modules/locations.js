@@ -1,6 +1,16 @@
+/**
+  * Filename: locations.js
+*/
 function locationsLoad(name) {
-  console.warn(window.location.href.indexOf("404") > -1)
+
+  // Tests weather or not you are in existing page
   if (!(window.location.href.indexOf('404') > -1)) {
+    
+    /** Loads in map from the locations folder 
+      * using ajax keeping it as a draggable 
+      * object, if you are in an exsiting page. 
+      * Making the "Player visibile"
+    */
     $.ajaxSetup({
       cache: false
     })
@@ -13,12 +23,16 @@ function locationsLoad(name) {
       $('.map').draggable({
         addClasses: false
       })
-      $('.interest-point').draggable({
-        addClasses: false
-      })
+      // $('.interest-point').draggable({
+      //   addClasses: false
+      // })
 
     })
   } else {
+    /**
+      * Still loads in resource 
+      * Makes "player" invisible
+    */   
     $.ajaxSetup({
       cache: false
     })

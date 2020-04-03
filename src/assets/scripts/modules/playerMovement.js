@@ -1,27 +1,32 @@
+/**
+  * Filename: playerMovement.js
+*/
+
 $(document).keydown(function(e){
   let speed = 17,
       movement = 15
   $map = $('.map')
+  // Only allow "player movement when in an existing page"
   if (!(window.location.href.indexOf("404") > -1)) {
     switch (e.which) {
       //move up
       case 38:
       case 87:
-        console.log(e.code + ' up')
+        // console.log(e.code + ' up')
         updatePosition(null, -1 * movement, speed, 'easeOutQuart')
       break
       
       //move down
       case 40:
       case 83:
-        console.log(e.code + ' down')
+        // console.log(e.code + ' down')
         updatePosition(null, movement, speed, 'easeOutQuart')
       break
 
       // move left
       case 37:
       case 65:
-        console.log(e.code + ' left')
+        // console.log(e.code + ' left')
         updatePosition(-1 * movement, null, speed, 'easeOutQuart')
       break
       //move right
@@ -33,7 +38,7 @@ $(document).keydown(function(e){
   }
 })
 
-
+// Sets the position of an object
 function setPosition(target, x, y) {
   let $this = $(this)
   $this.target = target
@@ -41,8 +46,8 @@ function setPosition(target, x, y) {
   $this.posY = y
 
   if ($this.posX != null && $this.posY != null) {
-    console.log("Position X", $this.posX)
-    console.log("Position Y", $this.posY)
+    // console.log("Position X", $this.posX)
+    // console.log("Position Y", $this.posY)
     $this.target.css({
       'left': $this.posX + 'px',
       'top': $this.posY + 'px'
@@ -54,18 +59,20 @@ function setPosition(target, x, y) {
         'left': $this.posX + 'px'
       })
     }else {
-      console.warn("X is returning null")
+      console.warn("X is returning null... Still hoping this is intentional")
     }
     if ($this.posY != null) {
       $this.target.css({
         'top': $this.posY + 'px'
       })
     }else {
-      console.warn("Y is returning null")
+      console.warn("Y is returning null... Still hoping this is intentional")
     }
   }
 }
 
+// Updates players position
+// Map is moved in the opposite direction of player
 function updatePosition(x, y, dt, easing) {
   let $this = $(this)
   $this.moveX = x
@@ -78,12 +85,12 @@ function updatePosition(x, y, dt, easing) {
   if ($this.moveX != null) {
     if ($this.moveX < 0) {
       $this.moveX *= -1
+      // Detects if player is getting out of the window in the left xPosition
       if ($player.position().left > 1) {
         $player.stop().animate({
           left: '-=' + $this.moveX + 'px'
         }, dt, easing)
       }
-
       $map.stop().animate({
         left: '+=' + ($this.moveX - $this.offsetX) + 'px'
       }, dt, easing)      
@@ -103,6 +110,7 @@ function updatePosition(x, y, dt, easing) {
 
     if ($this.moveY < 0) {
       $this.moveY *= -1
+      // Detects if player is getting out of the window in the top yPosition
       if ($player.position().top > 1) {
         $player.stop().animate({
           top: '-=' + $this.moveY + 'px'

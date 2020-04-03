@@ -1,3 +1,10 @@
+/**
+  * Version: 1.0
+  * Author: Manuel Osorio
+  * Author URL: https://manuelosorio.me
+  *
+*/
+
 const $audio = $('#audio'),
       $volumeIcon = $('#volumeIcon'),
       $player = $('.player'),
@@ -15,6 +22,11 @@ $(document).ready(function () {
         $allow = $('#allow'),
         $decline = $('#decline')
 
+  /**
+   * Attempts to play sound on play load
+   * On some browsers if 'soundAllowed' is set to true sound would play onLoad
+   * If set to false sound will be muted onload
+   */
   if (localStorage['soundAllowed'] !== undefined) {
     let isSoundAllowed = localStorage.getItem('soundAllowed')
     if (localStorage['soundAllowed'] === 'true') {
@@ -37,6 +49,7 @@ $(document).ready(function () {
     $volumeIcon.attr('src', '')
   }
 
+  // Allow sound to be played
   $allow.click(function() {
     localStorage.setItem('soundAllowed', 'true')
     $alert.remove()
@@ -44,14 +57,14 @@ $(document).ready(function () {
     $audio.prop('volume', 0.25)
     $volumeIcon.attr('src', './images/sound.svg')
   })
-
+  // Disallowed sound to be played
   $decline.click(function() {
     localStorage.setItem('soundAllowed', 'false')
     $volumeIcon.attr('src', './images/mute.svg')
     $alert.remove()
   })
 
-
+  // Toggle Sound
   $volumeIcon.click(function () {
     if (localStorage['soundAllowed'] === 'true') {
       localStorage['soundAllowed'] = 'false'
@@ -64,10 +77,9 @@ $(document).ready(function () {
     }
     console.log('Is sound allowed', localStorage['soundAllowed']) 
   })
+  
 
-
-
-
-    console.log('Is sound allowed: ', localStorage['soundAllowed'])
+  
+  // console.log('Is sound allowed: ', localStorage['soundAllowed'])
 
 })

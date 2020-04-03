@@ -1,9 +1,16 @@
+/**
+  * Filename: routes.js
+*/
+
 let root = null
 let useHash = true // Defaults to: false
 let hash = '#!' // Defaults to: '#'
 let router = new Navigo(root, useHash, hash)
 
+
+
 function routes() {
+  // Default Route
   router.on(function () {
     console.info('The Underground')
     locationsLoad('the-underground')
@@ -11,7 +18,7 @@ function routes() {
     setPosition($player, 62, 311)
     dialogueHide()
   })
-  
+  // Route Doesn't Exist
   router.notFound(function (query) {
     console.info('404 page not found')
     locationsLoad('stay-determined')
@@ -19,6 +26,7 @@ function routes() {
     router.navigate("/404")
     deleteNav()
     dialogueHide()
+    // Pressing any key returns to main page
     $(document).keydown(function (e) {
       if (window.location.href.indexOf("404") > -1) {
         setPosition($player, 62, 311)
@@ -28,7 +36,9 @@ function routes() {
     })
   })
   
-  
+  /*
+      #TODO: Find a way to incorparate JSON to run each of these functions
+  */
   router
     .on({
 
@@ -122,7 +132,7 @@ function routes() {
         locationsLoad('new-home')
         newSound('his-theme')
         setPosition($player, 768, 369.246)
-        setPosition($('.map'), 126, -1980);
+        setPosition($('.map'), 126, -1980)
         dialogue(null, "New Home is the new capital of the Underground, ruled by Asgore Dreemurr, " +
           "and the final location in the game before the protagonist reaches the barrier.")
       }
